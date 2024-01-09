@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRIP TO HEAVEN</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="heaven.css"
+  </head>
+  <body>
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
+
+      <a href="#" class="logo"><span>T</span>rip to Heaven</a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#book">Book</a>
+        <a href="#packages">Packages</a>
+        <a href="#manage">Manage</a>
+        <a href="#travel info">Travel Info</a>
+        <a href="#explore">Explore</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+
+      <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search" />
+        <label for="search-bar" class="fas fa-search"></label>
+      </form>
+    </header>
+
+<!--LOG IN FORM-->
+    <div class="login-form-container">
+      <i class="fas fa-times" id="login-form-close"></i>
+      <form action="login.php" method="post">
+        <h3>login</h3>
+        <input type="email" class="box" name="email" placeholder="Enter your Email" />
+        <input type="password" class="box" name="password" placeholder="Enter your Password" />
+        <input type="submit" value="login now" class="btn" />
+        <input type="checkbox" id="remember" />
+        <label for="remember">Remember me</label>
+        <p>Forgot Password? <a href="#">Click Here</a></p>
+        <p>Don't have an Account? <span id="signup-btn" class="link">Sign up now</span></p>
+      </form>
+    </div>
+
+<!-- SIGN UP FORM -->>
+    <div class="signup-form-container">
+      <i class="fas fa-times" id="signup-form-close"></i>
+      <form action="usersignup.php" method="post">
+        <h3>Sign up</h3>
+        <input type="email" class="box" name="email" placeholder="Enter your Email" />
+        <input type="password" class="box" name="password" placeholder="Enter your Password" />
+        <input type="password" class="box" name="re_password" placeholder="Confirm your Password" />
+        <input type="submit" value="Sign up" class="btn" name="signup-btn"/>
+        <p>Have an Account? <span id="login-btn2" class="link">Login now</span></p>
+      </form>
+    </div>
+
+    <!-- homescreen starts here -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Providing you with the best and safest travel experience!</h3>
+        <p>Discover new Places with us!</p>
+        <a href="#" class="btn">Discover More</a>
+      </div>
+
+      <div class="controls">
+        <span class="vid-btn active" data-src="img/vid-1.mp4"></span>
+        <span class="vid-btn" data-src="img/vid-2.mp4"></span>
+        <span class="vid-btn" data-src="img/vid-3.mp4"></span>
+        <span class="vid-btn" data-src="img/vid-4.mp4"></span>
+      </div>
+
+      <div class="video-container">
+        <video
+          src="img/vid-1.mp4"
+          id="video-slider"
+          loop
+          autoplay
+          muted
+        ></video>
+      </div>
+    </section>
+
+    <!--BOOK FLIGHT starts here-->
+    <section class="book" id="book">
+      <h1 class="heading">
+        <span>B</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>F</span>
+        <span>l</span>
+        <span>i</span>
+        <span>g</span>
+        <span>h</span>
+        <span>t</span>
+      </h1>
+      <div class="row">
+        <div class="img">
+          <img src="img/book-1.jpg" alt="" />
+        </div>
+
+        <form action="book_flight.php" form method="post">
+          <div class="inputBox">
+            <h3>From</h3>
+            <select name="from_place">
+              <option value="New York">New York</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Chicago">Chicago</option>
+              <option value="Miami">Miami</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="Washington DC">Washington DC</option>
+            </select>
+          </div>
+      
+          <div class="inputBox">
+            <h3>To</h3>
+            <select name="to_place">
+              <option value="London">London</option>
+              <option value="Paris">Paris</option>
+              <option value="Berlin">Berlin</option>
+              <option value="Rome">Rome</option>
+              <option value="Tokyo">Tokyo</option>
+              <option value="Sydney">Sydney</option>
+            </select>
+          </div>
+          <div class="inputBox">
+            <h3>Depart</h3>
+            <input type="date" name="depart">
+          </div>
+          <div class="inputBox">
+            <h3>Returning on</h3>
+            <input type="date" name="return">
+          </div>
+          <input type="submit" class="btn" value="book now" name="bookbtn">
+        </form>
+      </div>
+    </section>
+
+    <!--PACKAGES starts Here-->
+    <section class="packages" id="packages">
+      <h1 class="heading">
+        <span>P</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+      </h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="img/package-3.jpg" alt="" />
+
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i>Siargao</h3>
+            <p>
+              Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+              text.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price">$65.00 <span>$99.00</span></div>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="img/package-1.jpg" alt="" />`
+
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i>Japan</h3>
+            <p>
+              Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+              text.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price">$80.00 <span>$110.00</span></div>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="img/package-2.jpg" alt="" />
+
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i>Italy</h3>
+            <p>
+              Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+              text.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price">$90.00 <span>$120.00</span></div>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="img/package-4.jpg" alt="" />
+
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i>Maldives</h3>
+            <p>
+              Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+              text.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price">$110.00 <span>$140.00</span></div>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="img/package-5.jpg" alt="" />
+
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i>Boracay</h3>
+            <p>
+              Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+              text.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price">$65.00 <span>$99.00</span></div>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="img/package-6.jpg" alt="" />
+
+          <div class="content">
+            <h3><i class="fas fa-map-marker-alt"></i>Egypt</h3>
+            <p>
+              Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+              text.
+            </p>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <div class="price">$80.00<span>$110.00</span></div>
+            <a href="#" class="btn">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--- you can start MANAGE here --->
+   
+  
+    <script src="heaven.js" href="heaven.css"></script>
+  </body>
+</html>

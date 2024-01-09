@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRIP TO HEAVEN</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="home.css" />
+
+  <style>
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      margin: auto;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      /* padding: 14px 16px; */
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      position: right;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      font-size: 16px;
+      color: rgb(255, 255, 255);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>T</span>rip to Heaven</a>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#book">Book</a>
+      <a href="#packages">Packages</a>
+      <a href="#manage">Manage</a>
+      <a href="#travel">Travel Info</a>
+      <a href="#explore">Explore</a>
+    </nav>
+
+    <div class="icons">
+      <i class="fas fa-search" id="search-btn"></i>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Menu
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Edit Profile</a>
+        <a href="#">Booked</a>
+        <a href="#">Pending</a>
+        <a href="#">Logout</a>
+      </div>
+
+    </div>
+    <form action="" class="search-bar-container">
+      <input type="search" id="search-bar" placeholder="search" />
+      <label for="search-bar" class="fas fa-search"></label>
+    </form>
+  </header>
+
+  <div id="profile-container">
+    <i class="fas fa-times" id="profile-close"></i>
+    <div>
+      <p>Ola! This is the profile</p>
+    </div>
+  </div>
+
+  <!-- homescreen starts here -->
+  <section class="home" id="home">
+    <div class="content">
+      <h3>Providing you with the best and safest travel experience!</h3>
+      <p>Discover new Places with us!</p>
+      <a href="#" class="btn">Discover More</a>
+    </div>
+
+    <div class="controls">
+      <span class="vid-btn active" data-src="img/vid-1.mp4"></span>
+      <span class="vid-btn" data-src="img/vid-2.mp4"></span>
+      <span class="vid-btn" data-src="img/vid-3.mp4"></span>
+      <span class="vid-btn" data-src="img/vid-4.mp4"></span>
+    </div>
+
+    <div class="video-container">
+      <video src="img/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+  </section>
+
+  <!--BOOK FLIGHT starts here-->
+  <section class="book" id="book">
+    <h1 class="heading">
+      <span>B</span>
+      <span>o</span>
+      <span>o</span>
+      <span>k</span>
+      <span class="space"></span>
+      <span>F</span>
+      <span>l</span>
+      <span>i</span>
+      <span>g</span>
+      <span>h</span>
+      <span>t</span>
+    </h1>
+    <div class="row">
+      <div class="img1">
+        <img src="img/book-1.jpg" alt="" />
+      </div>
+
+      <form action="book_flight.php" form method="post">
+        <div class="inputBox">
+          <h3>From</h3>
+          <select name="from_place">
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Miami">Miami</option>
+            <option value="San Francisco">San Francisco</option>
+            <option value="Washington DC">Washington DC</option>
+          </select>
+        </div>
+    
+        <div class="inputBox">
+          <h3>To</h3>
+          <select name="to_place">
+            <option value="London">London</option>
+            <option value="Paris">Paris</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Rome">Rome</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Sydney">Sydney</option>
+          </select>
+        </div>
+        <div class="inputBox">
+          <h3>Depart</h3>
+          <input type="date" name="depart">
+        </div>
+        <div class="inputBox">
+          <h3>Returning on</h3>
+          <input type="date" name="return">
+        </div>
+        <input type="submit" class="btn" value="book now" name="bookbtn">
+      </form>
+    
+    </div>
+  </section>
+
+  <!--PACKAGES starts Here-->
+  <section class="packages" id="packages">
+    <h1 class="heading">
+      <span>P</span>
+      <span>a</span>
+      <span>c</span>
+      <span>k</span>
+      <span>a</span>
+      <span>g</span>
+      <span>e</span>
+      <span>s</span>
+    </h1>
+
+    <div class="box-container">
+      <div class="box">
+        <img src="img/package-3.jpg" alt="" />
+
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i>Siargao</h3>
+          <p>
+            Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+            text.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">$65.00 <span>$99.00</span></div>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/package-1.jpg" alt="" />
+
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i>Japan</h3>
+          <p>
+            Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+            text.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">$80.00 <span>$110.00</span></div>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/package-2.jpg" alt="" />
+
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i>Italy</h3>
+          <p>
+            Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+            text.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">$90.00 <span>$120.00</span></div>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/package-4.jpg" alt="" />
+
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i>Maldives</h3>
+          <p>
+            Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+            text.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">$110.00 <span>$140.00</span></div>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/package-5.jpg" alt="" />
+
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i>Boracay</h3>
+          <p>
+            Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+            text.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">$65.00 <span>$99.00</span></div>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="img/package-6.jpg" alt="" />
+
+        <div class="content">
+          <h3><i class="fas fa-map-marker-alt"></i>Egypt</h3>
+          <p>
+            Lorem ipsum is simply dummy text, Lorem ipsum is simply dummy
+            text.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="price">$80.00<span>$110.00</span></div>
+          <a href="#" class="btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--- you can start MANAGE here --->
+<section class="manage" id="manage">
+    <h1 class="heading">
+      <span>M</span>
+      <span>a</span>
+      <span>n</span>
+      <span>a</span>
+      <span>g</span>
+      <span>e</span>
+    </h1>
+
+
+
+    <div class="row">
+      <div class="img">
+        <img src="img/book-2.jpg" alt="" />
+      </div>
+
+      <form action="">
+        <div class="inputBox">
+          <h2>Manage Flight Status</h2> 
+          <h3>From</h3>
+          <select name="Origin_place">
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Miami">Miami</option>
+            <option value="San Francisco">San Francisco</option>
+            <option value="Washington DC">Washington DC</option>
+          </select>
+        </div>
+    
+        <div class="inputBox">
+          <h3>To</h3>
+          <select name="destination_place">
+            <option value="London">London</option>
+            <option value="Paris">Paris</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Rome">Rome</option>
+            <option value="Tokyo">Tokyo</option>
+            <option value="Sydney">Sydney</option>
+          </select>
+        </div>
+        <div class="inputBox">
+          <h3>Flight Date</h3>
+          <input type="date" />
+        </div>
+        <input type="submit" class="btn" value="Check Status" />
+      </form>
+    </div>
+  </section>
+
+
+ <!--- you can start Travel Info here --->
+<section class ="travel" id="travel">
+    <h1 class="heading">
+      <span>T</span>
+      <span>r</span>
+      <span>a</span>
+      <span>v</span>
+      <span>e</span>
+      <span>l</span>
+      <span class="space"></span>
+      <span>i</span>
+      <span>n</span>
+      <span>f</span>
+      <span>o</span>
+    </h1>
+    <div class="box-container">
+      <div class ="box">
+        <i class="fas fa-clock"></i>
+        <h3> Booking Guidelines </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+         <div class ="box">
+        <i class="fas fa-credit-card"></i>
+        <h3> Payment Option</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+         <div class ="box">
+        <i class="fas fa-shopping-bag"></i>
+        <h3> Baggage Information</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class ="box">
+        <i class="fas fa-bullhorn"></i>
+        <h3> Covid-19 Information </h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class ="box">
+        <i class="fas fa-address-card"></i>
+        <h3> Airline Policies </h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class ="box">
+        <i class="fas fa-book"></i>
+        <h3> Travel Documents </h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+      </div>
+    </section>
+       
+
+
+<!------start explore here ----->
+<section class ="explore" id="explore">
+    <h1 class="heading">
+      <span>E</span>
+      <span>x</span>
+      <span>p</span>
+      <span>l</span>
+      <span>o</span>
+      <span>r</span>
+      <span>e</span>
+  </h1>
+<div class ="box-container">
+
+<div class ="box">
+  <img src="img/explore-1.jpg" alt="">
+  <div class="content">
+    <h3>Bohol</h3>
+    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry</p>
+    <a href ="#" class="btn">See More</a>
+  </div>
+</div>
+
+<div class ="box">
+  <img src="img/explore-2.jpg" alt="">
+  <div class="content">
+    <h3>China</h3>
+    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry</p>
+    <a href ="#" class="btn">See More</a>
+  </div>
+</div>
+
+<div class ="box">
+  <img src="img/explore-3.jpg" alt="">
+  <div class="content">
+    <h3>Amsterdam</h3>
+    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry</p>
+    <a href ="#" class="btn">See More</a>
+  </div>
+</div>
+
+<div class ="box">
+  <img src="img/explore-4.jpg" alt="">
+  <div class="content">
+    <h3>Japan</h3>
+    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry</p>
+    <a href ="#" class="btn">See More</a>
+  </div>
+</div>
+
+<div class ="box">
+  <img src="img/explore-5.jpg" alt="">
+  <div class="content">
+    <h3>Seoul</h3>
+    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry</p>
+    <a href ="#" class="btn">See More</a>
+  </div>
+</div>
+
+<div class ="box">
+  <img src="img/explore-6.jpg" alt="">
+  <div class="content">
+    <h3>Bangkok</h3>
+    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry</p>
+    <a href ="#" class="btn">See More</a>
+  </div>
+</div>
+
+
+<div class ="box">
+  <img src="img/explore-7.jpg" alt="">
+  <div class="content">
+    <h3>Malaysia</h3>
+    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry</p>
+    <a href ="#" class="btn">See More</a>
+  </div>
+</div>
+
+<div class ="box">
+  <img src="img/explore-8.jpg" alt="">
+  <div class="content">
+    <h3>Singapore</h3>
+    <p>Lorem Ipsum is simply dummy text of the farhan and typesetting industry</p>
+    <a href ="#" class="btn">See More</a>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+
+<!--- LOGO AND ETC--->
+<section class ="brand-container">
+  <div class="swiper mySwiper brand-slider">
+    <div class="swiper-wrapper wrapper">
+      <div class="swiper-slide"><img src="img/logo.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/logo-1.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/logo-2.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/logo-3.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/logo-4.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/logo-5.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/logo-6.png" alt=""></div>
+      <div class="swiper-slide"><img src="img/logo-7.png" alt=""></div>
+    
+    </div>
+  </div>
+</section>
+
+
+
+
+<!----FOOTER---->
+
+<section class ="footer">
+  <div class="box-container">
+<div class="box">
+  <h3>About us</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+  sed do eiusmod tempor incididunt ut labore.</p>
+</div>
+
+
+
+<div class="box">
+  <h3>Quick Links</h3>
+  <a href="#">home</a>
+  <a href="#">book</a>
+  <a href="#">packages</a>
+  <a href="#">manage</a>
+  <a href="#">travel</a>
+  <a href="#">explore</a>
+</div>
+
+<div class="box">
+  <h3>Follow us</h3>
+  <a href="#">Facebook</a>
+  <a href="#">Instagram</a>
+  <a href="#">Twitter</a>
+</div>
+<div class ="credit">
+<h1> Copyright 2023 <span>TRIP TO HEAVEN</span> | All rights reserved </h1>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src ="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="home.js"></script>
+</body>
+
+</html>

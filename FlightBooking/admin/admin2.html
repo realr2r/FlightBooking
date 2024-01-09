@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="admin2.css">
+    
+</head> 
+<body>
+
+
+    <section id="menu">
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+            <h2>Dashboard</h2>
+        </div>
+
+
+        <div class="items">
+            <li><i class="fa-solid fa-users"></i><a href="admin.html">Users</a></li>
+            <li><i class="fa-solid fa-list"></i><a href="admin1.html">List of Bookings</a></li>
+            <li><i class="fa-solid fa-calendar-days"></i><a href="#">Flight Schedule</a></li>
+            <li><i class="fa-regular fa-credit-card"></i><a href="#">Transactions</a></li>
+            <li><i class="fa-sharp fa-solid fa-right-from-bracket"></i><a href="#">Logout</a></li>
+
+        </div>
+    </section>
+
+    <section id="interface">
+        <div class="navigation">
+            <div class ="n1">
+                <div class="search">
+                <i class = "fas fa-search"></i>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="profile">
+            <i class="fas fa-bell"></i>
+            <img src="img/admin.png" alt="">
+        </div>
+    </div>
+    <h3 class="i-name"> User Accounts </h3> 
+    <div class="values">
+        <div class="val-box">
+            <i class ="fas fa-users"></i>
+            <div>
+                <h3>1</h3>
+                <span>New Users</span>
+            </div>
+        </div>
+         <div class="val-box">
+            <i class ="fa-solid fa-xmark"></i>
+            <div>
+                <h3>0</h3>
+                <span>Inactive</span>
+            </div>
+        </div>
+         <div class="val-box">
+            <i class ="fa-solid fa-check"></i>
+            <div>
+                <h3>1</h3>
+                <span>Active</span>
+            </div>
+        </div>
+         <div class="val-box">
+            <i class ="fa-solid fa-list"></i>
+            <div>
+                <h3>1</h3>
+                <span>Total Schedules</span>
+            </div>
+        </div>
+        
+    </div>
+
+    <dir class = "board">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>From</td>
+                    <td>Return</td>
+                    <td>Status</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="people">
+                        <img src="img/user.png" alt="">
+                        <div class="people-de">
+                            <h5>Arthur Berces</h5>
+                            <p>arthur@example.com</p>
+                        </div>
+                    </td>
+
+                    <td class ="from">
+                        <h5>Metro Manila</h5>
+                        <p>17/04/2023 8:00PM</p>
+                    </td>
+                    <td class ="return">
+                        <h5>Siargao</h5>
+                        <p>03/05/2023 11:00AM</p>
+                    </td>
+
+
+
+                    <td class="active"><p>Completed</p></td>
+
+
+
+
+
+                    <td class="edit"><a href="#">Edit</a></td>
+                    <td class="delete"><a href="#">Delete</a></td>
+                    
+
+
+
+
+                    </td>
+                </tr>
+            </tbody>
+    </dir>
+    </section>
+
+</body>
